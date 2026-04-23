@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Brain Tumour Classifier</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0e1a;
+            color: #f1f5f9;
+            min-height: 100vh;
+        }
+        .container { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+        a { color: #818cf8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        h1 { font-size: 32px; margin-bottom: 24px; font-weight: 700; }
+        h2 { font-size: 20px; margin: 28px 0 12px; color: #a5b4fc; }
+        p, li { line-height: 1.8; color: #94a3b8; font-size: 15px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        .back { display: inline-block; margin-bottom: 32px; color: #6366f1; font-weight: 500; }
+        .card {
+            background: rgba(17, 24, 39, 0.7);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(20px);
+        }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+        th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; }
+        th { color: #6366f1; font-weight: 600; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="back">← Back to Classifier</a>
+    <div class="card">
+        <h1>🧠 About This Project</h1>
+        <p>
+            This web application uses a deep learning model to classify brain MRI scans into four categories.
+            It is built for educational and research purposes only.
+        </p>
+
+        <h2>Tumour Classes</h2>
+        <table>
+            <tr><th>Class</th><th>Description</th><th>Severity</th></tr>
+            <tr><td>🔴 Glioma</td><td>Tumour originating from glial cells</td><td>High</td></tr>
+            <tr><td>🟠 Meningioma</td><td>Tumour arising from the meninges</td><td>Medium</td></tr>
+            <tr><td>🟡 Pituitary</td><td>Tumour in the pituitary gland</td><td>Medium</td></tr>
+            <tr><td>🟢 No Tumour</td><td>No tumour detected in scan</td><td>None</td></tr>
+        </table>
+
+        <h2>Model Architecture</h2>
+        <ul>
+            <li><strong>Base Model:</strong> MobileNetV2 (pre-trained on ImageNet)</li>
+            <li><strong>Training Strategy:</strong> Two-phase transfer learning (frozen → fine-tuned)</li>
+            <li><strong>Input Size:</strong> 224 × 224 pixels (RGB)</li>
+            <li><strong>Data Augmentation:</strong> Rotation, shifts, zoom, flips, brightness</li>
+            <li><strong>Framework:</strong> TensorFlow / Keras</li>
+        </ul>
+
+        <h2>Tech Stack</h2>
+        <ul>
+            <li><strong>Backend:</strong> Python, Flask</li>
+            <li><strong>ML Framework:</strong> TensorFlow 2.x</li>
+            <li><strong>Frontend:</strong> Vanilla HTML/CSS/JS</li>
+        </ul>
+
+        <h2>⚠️ Disclaimer</h2>
+        <p>
+            This tool is a <strong>research/demo project</strong> and must <strong>NOT</strong> be used for actual medical diagnosis.
+            Always consult a qualified healthcare professional for medical advice.
+        </p>
+    </div>
+</div>
+</body>
+</html>
