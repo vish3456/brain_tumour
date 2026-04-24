@@ -7,6 +7,7 @@ Powered by Gradio for easy local use and one-click Hugging Face Spaces deploymen
 """
 
 import os
+os.environ["GRADIO_ANALYTICS_ENABLED"] = "False"
 import numpy as np
 import gradio as gr
 from tensorflow.keras.models import load_model
