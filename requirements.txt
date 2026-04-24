@@ -4,5 +4,5 @@ numpy
 pandas
 tensorflow
 keras
-flask
+gradio
 seaborn
